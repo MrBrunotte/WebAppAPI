@@ -22,5 +22,12 @@ namespace WebApp.Controllers
         {
             return 50;
         }
+
+        [Route("sendData")]
+        public void SendData([FromBody] Person p) 
+        {
+            Console.WriteLine($"{p.FirstName} {p.LastName}");
+        }
     }
+
 }
